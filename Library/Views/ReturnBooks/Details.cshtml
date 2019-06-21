@@ -1,0 +1,37 @@
+﻿@model Library.Models.ReturnBook
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReturnBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Qty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReturnDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookrent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookrent.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ReturnId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
